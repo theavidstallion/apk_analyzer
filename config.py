@@ -12,6 +12,6 @@ class Config:
     MAIL_PASSWORD = 'rzdx ldtl uyzf sgvo'  # Enter your password here
 
     # Google OAuth Config (if you want to use OAuth)
-    GOOGLE_CLIENT_ID = '661060623580-ahmroarrqmlhd6dj6009160a6b3nscq7.apps.googleusercontent.com'
-    GOOGLE_CLIENT_SECRET = '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'
+    GOOGLE_CLIENT_ID = 'xxxx'
+    GOOGLE_CLIENT_SECRET = 'xxxx'
     GOOGLE_DISCOVERY_URL = 'https://accounts.google.com/.well-known/openid-configuration'

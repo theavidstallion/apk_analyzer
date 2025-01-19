@@ -54,8 +54,8 @@ login_manager.login_view = 'login'
 s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
 
 # Configure Google OAuth2
-google_bp = make_google_blueprint(client_id='89689369343-r0fq61v09s5q3e3dbnajvm4abha0jhod.apps.googleusercontent.com',
-                                   client_secret='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',
+google_bp = make_google_blueprint(client_id='xxxx',
+                                   client_secret='xxxx',
                                    redirect_to='google_login')
 app.register_blueprint(google_bp, url_prefix='/google_login')
 
