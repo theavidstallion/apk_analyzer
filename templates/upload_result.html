@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Upload Result</h2>
+<p><strong>Filename:</strong> {{ filename }}</p>
+
+<h3>Permissions</h3>
+<ul>
+    {% for permission in permissions %}
+    <li>{{ permission }}</li>
+    {% endfor %}
+</ul>
+
+<h3>APK Metadata</h3>
+<pre>{{ apk_metadata | tojson(indent=4) }}</pre>
+
+<a href="{{ url_for('upload_apk') }}">Upload Another File</a>
+{% endblock %}

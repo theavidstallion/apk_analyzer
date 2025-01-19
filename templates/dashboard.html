@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+<h3>Uploaded APKs</h3>
+<ul>
+    {% for upload in uploads %}
+        <li>{{ upload.filename }} - {{ upload.permissions }}</li>
+    {% else %}
+        <li>No uploads yet.</li>
+    {% endfor %}
+</ul>
+<div style="margin-bottom: 20px;">
+    <a href="{{ url_for('upload_apk') }}" style="display: inline-block; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+        Upload APK
+    </a>
+</div>
+{% endblock %}

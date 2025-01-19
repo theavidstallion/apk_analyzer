@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Signup</h2>
+
+<!-- Display a flash message for successful account creation -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="alert alert-{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.username.label }} {{ form.username }}
+    </div>
+    <div>
+        {{ form.email.label }} {{ form.email }}
+    </div>
+    <div>
+        {{ form.password.label }} {{ form.password }}
+    </div>
+    <div>
+        {{ form.confirm_password.label }} {{ form.confirm_password }}
+    </div>
+    <div class="btn btn-link">
+        {{ form.submit }}
+    </div>
+</form>
+
+<!-- Verification message -->
+<p>After signing up, please check your email to verify your account.</p>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Upload APK</h2>
+<form method="POST" action="{{ url_for('upload_apk') }}" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Upload APK</button>
+</form>
+{% endblock %}

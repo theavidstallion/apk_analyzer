@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/bg.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Fraud Detection System</h1>
+            <p>This is a cutting-edge system where Android apps are analyzed deeply using various tools, data, and AI techniques to detect fraudulent activities, ensuring a secure environment for all users. The system leverages advanced algorithms to monitor and analyze app data, known history of the app, intensity of the permissions app requires and flag suspicious elements, providing efficient fraud detection and prevention solutions.</p>
+        </section>
+        
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; Hamza & Saad - FYP 1</p>
+    </footer>
+</body>
+</html>

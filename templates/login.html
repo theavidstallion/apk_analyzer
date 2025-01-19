@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Login</h2>
+
+<!-- Flask-WTF Form -->
+<form method="POST" action="{{ url_for('login') }}">
+    {{ form.hidden_tag() }}
+
+    <!-- Email Field -->
+    <div>
+        {{ form.email.label }}
+        {{ form.email(class="form-control") }}
+        {% for error in form.email.errors %}
+            <small class="text-danger">{{ error }}</small>
+        {% endfor %}
+    </div>
+
+    <!-- Password Field -->
+    <div>
+        {{ form.password.label }}
+        {{ form.password(class="form-control") }}
+        {% for error in form.password.errors %}
+            <small class="text-danger">{{ error }}</small>
+        {% endfor %}
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+        {{ form.submit(class="btn btn-primary") }}
+    </div>
+</form>
+</br>
+<a href="{{ url_for('google.login') }}">
+    <button>Continue with Google</button>
+</a>
+</br>
+
+<!-- Forgot Password Button -->
+<div>
+    <a href="{{ url_for('forgot_password') }}" class="btn btn-link">Forgot Password?</a>
+</div>
+{% endblock %}

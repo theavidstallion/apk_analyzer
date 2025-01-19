@@ -1,0 +1,230 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a more elegant, modern font */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft gradient background */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+/* Apply a subtle animation to the header */
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+header:hover {
+    background: #555; /* Darker shade on hover */
+}
+
+/* Navigation menu styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Tomato red on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Main content section */
+main {
+    padding: 40px 20px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer styling */
+footer {
+    background-color: #1b2530;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    border-top: 2px solid #ff6347; /* Add a tomato red top border */
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 10px 5px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Adding smooth hover effects to buttons */
+button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ff6347, #ff4500); /* Gradient button */
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff4500, #ff6347);
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Floating action button */
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ff6347;
+    border-radius: 50%;
+    padding: 15px;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.fab:hover {
+    background: #ff4500;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Adding smooth transition for the footer */
+footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* Making links more interactive with underline on hover */
+a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6347;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Smooth transitions for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Form Styles */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design for Forms */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    form input[type="submit"] {
+        font-size: 1rem;
+    }
+}
