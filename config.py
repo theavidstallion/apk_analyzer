@@ -9,7 +9,7 @@ class Config:
     MAIL_PORT = 587
     MAIL_USE_TLS = True
     MAIL_USERNAME = 'raventechgeeks@gmail.com'  # Enter your email here
-    MAIL_PASSWORD = 'rzdx ldtl uyzf sgvo'  # Enter your password here
+    MAIL_PASSWORD = 'wgvz jfcs iyja phwg'  # Enter your password here
 
     # Google OAuth Config (if you want to use OAuth)
     GOOGLE_CLIENT_ID = '89689369343-r0fq61v09s5q3e3dbnajvm4abha0jhod.apps.googleusercontent.com'
