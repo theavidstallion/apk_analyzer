@@ -29,9 +29,9 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Use your SMTP server
 app.config['MAIL_PORT'] = 587  # Usually 587 for TLS or 465 for SSL
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = 'farooqj072@gmail.com'  # Your email address
-app.config['MAIL_PASSWORD'] = 'rzdx ldtl uyzf sgvo'  # Your email password
-app.config['MAIL_DEFAULT_SENDER'] = 'farooqj072@gmail.com'  # Default sender for email
+app.config['MAIL_USERNAME'] = 'raventechgeeks@gmail.com'  # Your email address
+app.config['MAIL_PASSWORD'] = 'wgvz jfcs iyja phwg'  # Your email password
+app.config['MAIL_DEFAULT_SENDER'] = 'raventechgeeks@gmail.com'  # Default sender for email
 app.config['SECRET_KEY'] = 'dfnsa;dkjflksdjf;fkljasedsdw2343'
 
 mail = Mail(app)
@@ -54,8 +54,8 @@ login_manager.login_view = 'login'
 s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
 
 # Configure Google OAuth2
-google_bp = make_google_blueprint(client_id='xxxx',
-                                   client_secret='xxxx',
+google_bp = make_google_blueprint(client_id='89689369343-r0fq61v09s5q3e3dbnajvm4abha0jhod.apps.googleusercontent.com',
+                                   client_secret='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',
                                    redirect_to='google_login')
 app.register_blueprint(google_bp, url_prefix='/google_login')
 
